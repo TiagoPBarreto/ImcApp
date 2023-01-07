@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cinza_escuro"
+    tools:context=".view.RegisterActivity">
+
+    <ImageView
+        android:id="@+id/imvLogo"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:src="@drawable/fitnes"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineregister"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.10" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineregister2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.90" />
+
+    <EditText
+        android:id="@+id/edRegistroNome"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Digite seu Nome"
+        android:background="@drawable/bg_register"
+        android:padding="15dp"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        app:layout_constraintEnd_toStartOf="@id/guidelineregister2"
+        app:layout_constraintTop_toBottomOf="@id/imvLogo"
+        app:layout_constraintStart_toEndOf="@id/guidelineregister"
+        android:layout_marginTop="20dp"
+        android:textAlignment="center"/>
+
+    <EditText
+        android:id="@+id/edregistroSobreNome"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Digite seu Sobrenome"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:background="@drawable/bg_register"
+        android:padding="15dp"
+        app:layout_constraintEnd_toStartOf="@id/guidelineregister2"
+        app:layout_constraintTop_toBottomOf="@id/edRegistroNome"
+        app:layout_constraintStart_toEndOf="@id/guidelineregister"
+        android:layout_marginTop="10dp"
+        android:textAlignment="center"/>
+
+    <EditText
+        android:id="@+id/edRegistroEmail"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Digite seu E-mail"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:background="@drawable/bg_register"
+        android:padding="15dp"
+        android:inputType="textEmailAddress"
+        app:layout_constraintEnd_toStartOf="@id/guidelineregister2"
+        app:layout_constraintTop_toBottomOf="@id/edregistroSobreNome"
+        app:layout_constraintStart_toEndOf="@id/guidelineregister"
+        android:layout_marginTop="10dp"
+        android:textAlignment="center"/>
+
+    <EditText
+        android:id="@+id/edRegistroSenha"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Digite sua Senha"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:background="@drawable/bg_register"
+        android:padding="15dp"
+        android:inputType="numberPassword"
+        app:layout_constraintEnd_toStartOf="@id/guidelineregister2"
+        app:layout_constraintTop_toBottomOf="@id/edRegistroEmail"
+        app:layout_constraintStart_toEndOf="@id/guidelineregister"
+        android:layout_marginTop="10dp"
+        android:textAlignment="center"/>
+
+    <Button
+        android:id="@+id/btnEntrar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Entrar"
+        android:layout_marginTop="40dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:padding="10dp"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:background="@drawable/bg_login_register"
+        app:layout_constraintTop_toBottomOf="@id/edRegistroSenha"
+        app:layout_constraintStart_toEndOf="@id/guidelineregister"
+        app:layout_constraintEnd_toStartOf="@id/guidelineregister2"/>
+
+    <TextView
+        android:id="@+id/tvLogin"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Já Possui Cadastro?\n Login!"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="@id/guidelineregister"
+        app:layout_constraintEnd_toEndOf="@id/guidelineregister2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:textAlignment="center"
+        android:layout_marginBottom="10dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

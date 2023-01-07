@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cinza_escuro"
+    tools:context=".view.LoginActivity">
+
+    <ImageView
+        android:id="@+id/imvLogo"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:src="@drawable/fitnes"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelinerLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.10" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelinerLogin2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.90" />
+
+    <EditText
+        android:id="@+id/edLoginSenha"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Digite sua senha"
+        android:background="@drawable/bg_register"
+        android:padding="15dp"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:inputType="numberPassword"
+        app:layout_constraintEnd_toStartOf="@id/guidelinerLogin2"
+        app:layout_constraintTop_toBottomOf="@id/imvLogo"
+        app:layout_constraintStart_toEndOf="@id/guidelinerLogin"
+        android:layout_marginTop="80dp"
+        android:textAlignment="center"/>
+
+    <EditText
+        android:id="@+id/edLoginEmail"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Digite seu Email"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:background="@drawable/bg_register"
+        android:padding="15dp"
+        android:inputType="textEmailAddress"
+        app:layout_constraintEnd_toStartOf="@id/guidelinerLogin2"
+        app:layout_constraintTop_toBottomOf="@id/edLoginSenha"
+        app:layout_constraintStart_toEndOf="@id/guidelinerLogin"
+        android:layout_marginTop="10dp"
+        android:textAlignment="center"/>
+
+    <Button
+        android:id="@+id/btnEntrar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Entrar"
+        android:layout_marginTop="40dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:padding="10dp"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:background="@drawable/bg_login_register"
+        app:layout_constraintTop_toBottomOf="@id/edLoginEmail"
+        app:layout_constraintStart_toEndOf="@id/guidelinerLogin"
+        app:layout_constraintEnd_toStartOf="@id/guidelinerLogin2"/>
+
+
+    <TextView
+        android:id="@+id/tvCadastrar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Ainda não possui Cadastro?\n Cadastre-se Aqui!"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="@id/guidelinerLogin"
+        app:layout_constraintEnd_toEndOf="@id/guidelinerLogin2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:textAlignment="center"
+        android:layout_marginBottom="10dp"/>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
